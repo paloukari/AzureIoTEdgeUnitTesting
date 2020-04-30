@@ -60,9 +60,5 @@ namespace IoTModule
         {
             return await moduleClient.GetTwinAsync(cancellationToken);
         }
-        public async Task<Twin> GetTwinAsync()
-        {
-            return await moduleClient.GetTwinAsync();
-        }
     }
 }

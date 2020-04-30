@@ -16,7 +16,7 @@ To run this unit test:
    git clone https://github.com/paloukari/AzureIoTEdgeUnitTesting
 ```
 
-1. Build and run the xunit test
+2. Build and run the xunit test
 
 ``` bash
    cd AzureIoTEdgeUnitTesting

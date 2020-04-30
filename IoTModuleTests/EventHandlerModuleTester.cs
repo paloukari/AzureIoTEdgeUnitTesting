@@ -65,12 +65,14 @@ namespace IoTModuleTests
         [Fact]
         public async Task TestInputMessageHandler()
         {
-            var serviceProvider = await Init((e) =>
-                Assert.Equal(MessageResponse.Completed, e));
+            MessageResponse messageResponse = MessageResponse.Abandoned;
+            var serviceProvider = await Init((e) => messageResponse = e);
 
             await serviceProvider.GetService<IModuleClient>()
                 .SendEventAsync("input",
                     new Message(Encoding.UTF8.GetBytes("This is a mocked message!")));
+
+            Assert.Equal(MessageResponse.Completed, messageResponse);
         }
     }
 }

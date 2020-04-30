@@ -18,6 +18,5 @@ namespace IoTModule
             MethodCallback methodHandler,
             object userContext);
         Task<Twin> GetTwinAsync(CancellationToken cancellationToken);
-        Task<Twin> GetTwinAsync();
     }
 }
